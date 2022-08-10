@@ -1,0 +1,27 @@
+// utils styles
+@import "./utils/variables";
+
+// base styles
+@import "./base/base";
+@import "./base/reset";
+
+// components styles
+@import "./components/section";
+@import "./components/container";
+@import "./components/logo";
+@import "./components/buttons";
+@import "./components/page-header";
+@import "./components/hero";
+@import "./components/solutions";
+@import "./components/engage";
+@import "./components/team";
+@import "./components/network-team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/network-footer";
+@import "./components/mailing-form";
+@import "./components/modal-form";
+@import "./components/portfolio-filter-work";
+@import "./components/portfolio-our-work";
+
+// layout styles

@@ -1,0 +1,50 @@
+.engage__section {
+    padding-bottom: 94px;
+  }
+  
+  .container__title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 50px;
+  
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+  
+  .engage-list {
+    display: flex;
+  }
+  
+  .engage-item {
+    position: relative;
+    margin-right: 30px;
+
+    &:nth-child(3) {
+    margin-right: 0;
+  }
+
+    &__signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+  
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+    &__text {
+    margin: 0;
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.14;
+    color: var(--secondary-text-color);
+  }
+}
