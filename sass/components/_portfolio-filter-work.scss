@@ -1,21 +1,50 @@
 .section-portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  @include section;
   }
   
   .button-operating {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding-left: 0;
-    margin-bottom: 50px;
+    
+
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      
+
+    @media screen and (min-width: 768px) {
+      // display: flex;
+      // flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding-left: 0;
+      margin-bottom: 50px;
+    }
   }
   
   .button-secondary {
     margin-right: 8px;
+    margin-bottom: 15px;
   
     &:nth-child(5) {
     margin-right: 0;
+  }
+
+    &:nth-child(n+4) {
+      margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    &:nth-child(5) {
+      margin-right: 0;
+    }
   }
 
     &__item {

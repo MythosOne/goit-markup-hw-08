@@ -1,3 +1,17 @@
+.network {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+   @media screen and (min-width: 768px) {
+    margin-left: 165px
+   }
+
+   @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+   }
+}
+
 .social-network {
     display: flex;
     gap: 10px;
@@ -31,6 +45,18 @@
   
   .mailing-list {
     display: flex;
-    flex-direction: column;
-    margin-left: 93px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 60px;
+     }
+
+     @media screen and (min-width: 1200px) {
+      flex-direction: column;
+      margin: 0;
+      margin-left: 93px;
+     }
   }

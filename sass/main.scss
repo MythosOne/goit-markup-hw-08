@@ -4,6 +4,7 @@
 // base styles
 @import "./base/base";
 @import "./base/reset";
+@import "./base/mixins";
 
 // components styles
 @import "./components/section";
@@ -17,11 +18,11 @@
 @import "./components/team";
 @import "./components/network-team";
 @import "./components/clients";
-@import "./components/footer";
+@import "./components/addres-footer";
 @import "./components/network-footer";
 @import "./components/mailing-form";
 @import "./components/modal-form";
 @import "./components/portfolio-filter-work";
 @import "./components/portfolio-our-work";
-
+@import "./components/_mobile-menu";
 // layout styles
