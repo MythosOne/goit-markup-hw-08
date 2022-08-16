@@ -123,6 +123,11 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 480px) {
+  .header__container {
+    height: 60px;
+  }
+}
 
 .main-nav {
   display: -webkit-box;
@@ -206,7 +211,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .contact-link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -222,6 +227,9 @@ h3 {
     letter-spacing: 0.03em;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact-link:last-child {
+    margin-bottom: 0;
   }
   .contact-link:hover {
     color: var(--accent-text-color);
@@ -256,6 +264,36 @@ h3 {
     margin-right: 10px;
     fill: currentColor;
   }
+}
+
+.menu-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: 276px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.icon-menu-btn:hover {
+  fill: var(--accent-bt-color);
 }
 
 .hero__section {
@@ -1678,66 +1716,13 @@ h3 {
   letter-spacing: 0.03em;
 }
 
-.menu-btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin-left: 276px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .menu-btn {
-    display: none;
-  }
-}
-
-.menu-btn .icon-menu-close {
-  display: none;
-}
-
-.menu-btn.is-open .icon-menu-close {
-  display: block;
-}
-
-.menu-btn.is-open .icon-menu_btn {
-  display: none;
-}
-
-.menu-overlay {
+.menu-container {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-@media screen and (min-width: 768px) {
-  .menu-overlay {
-    display: none;
-  }
-}
-.menu-overlay.is-open {
-  opacity: 1;
-  pointer-events: initial;
-  visibility: visible;
-}
-
-.menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1746,17 +1731,28 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 480px;
-  background-color: #ffffff;
   height: 100%;
   padding: 48px 40px;
+  background: #fff;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  transform: translateX(100%);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
-.menu-overlay.is-open .menu-container {
+.menu-container.is-open .menu-container {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+@media screen and (min-width: 767px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -1770,8 +1766,6 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
-}
-.mobile-list:first-child {
   margin-bottom: auto;
 }
 .mobile-list__link {
@@ -1834,4 +1828,29 @@ h3 {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
+}
+
+.menu-btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icon-menu-close:hover {
+  fill: var(--accent-bt-color);
 }/*# sourceMappingURL=main.css.map */

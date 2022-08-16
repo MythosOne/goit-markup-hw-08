@@ -1,78 +1,37 @@
-.menu-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 40px;
-    height: 40px;
-
-    padding: 0;
-    margin-left: 276px;
-
-    background-color: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-}
-
-.menu-btn .icon-menu-close {
-    display: none;
-}
-
-.menu-btn.is-open .icon-menu-close {
-    display: block;
-}
-
-.menu-btn.is-open .icon-menu_btn {
-    display: none;
-}
-
-.menu-overlay {
+.menu-container {
     position: fixed;
     z-index: 100;
-
     top: 0;
     left: 0;
 
     width: 100%;
     height: 100%;
 
-    background: #ffffff;
-
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-
-@media screen and (min-width: 768px) {
-    display: none;
-}
-
-&.is-open {
-    opacity: 1;
-    pointer-events: initial;
-    visibility: visible;
-    }
-}
-
-.menu-container {
     display: flex;
     flex-direction: column;
     max-width: 480px;
-    background-color: #ffffff;
     height: 100%;
 
     padding: 48px 40px;
 
+    background: #fff;
+
+    transform: translateX(100%);
+
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
-    .menu-overlay.is-open & {
+    .menu-container.is-open & {
         transform: translateX(0);
     }
+
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
 }
 
 .mobile-list {
@@ -80,9 +39,7 @@
     flex-direction: column;
     gap: 32px;
 
-    &:first-child {
     margin-bottom: auto;
-    }
 
     &__link {
         font-weight: 500;
@@ -145,3 +102,25 @@
         color: var(--accent-text-color);
     }
 }
+
+.menu-btn-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.icon-menu-close:hover {
+    fill: var(--accent-bt-color)
+  }

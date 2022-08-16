@@ -20,22 +20,20 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="page">
-    <!--Header-->
+  <!-- Header -->
     <header class="page-header">
       <div class="container header__container">
         <nav class="main-nav">
           <a href="/" class="logo">
             <span class="logo__web--blue">Web</span>Studio
           </a>
-
-            <button type="button" class="menu-btn is-open" js-menu-container>
+            <button type="button" class="menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
               <svg width="40"
-                   height="40">
-                <use class="icon-menu_btn" href="./images/icons.svg#icon-menu_btn"></use>
-                <use class="icon-menu-close" href="./images/icons.svg#icon-menu-close"></use>
+                   height="40"
+                   aria-label="mobile menu switch">
+                <use class="icon-menu-btn" href="./images/icons.svg#icon-menu-btn"></use>                
               </svg>
-            </button>
-          
+            </button>          
           <ul class="nav list">
             <li class="nav__item">
               <a href="./index.html" class="nav__link nav__link--current">Студия</a>
@@ -68,7 +66,7 @@
       </div>
     </header>
     <main>
-      <!-- Hero -->
+  <!-- Hero -->
       <section class="section hero__section">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
@@ -81,7 +79,7 @@
           </button>
         </div>
       </section>
-      <!--Effective solutions-->
+  <!--Effective solutions-->
       <section class="section solutions__section">
         <div class="container">
           <ul class="solution-list list">
@@ -136,7 +134,7 @@
           </ul>
         </div>
       </section>
-      <!--What are we engage-->
+  <!--What are we engage-->
       <section class="section engage__section">
         <div class="container">
           <h2 class="container__title">Чем мы занимаемся</h2>
@@ -177,7 +175,7 @@
           </ul>
         </div>
       </section>
-      <!--Our team-->
+  <!--Our team-->
       <section class="section team__section">
         <div class="container">
           <h2 class="container__title">Наша команда</h2>
@@ -463,7 +461,7 @@
           </ul>
         </div>
       </section>
-      <!--Regular clients-->
+  <!--Regular clients-->
       <section class="section clients__section">
         <div class="container">
           <h2 class="container-title">Постоянные клиенты</h2>
@@ -538,7 +536,7 @@
         </div>
       </section>
     </main>
-    <!--Footer-->
+  <!--Footer-->
     <footer class="footer">
       <div class="container container__footer">
         <div class="footer-address">
@@ -638,7 +636,7 @@
         </div>
       </div>
     </footer>
-    <!-- Modal form -->
+  <!-- Modal form -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
@@ -720,9 +718,15 @@
         </form>
       </div>
     </div>
-    <!-- Mobile-menu -->
-    <div class="menu-overlay" data-menu>
-      <div class="menu-container">
+  <!-- Mobile-menu -->    
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-btn-close js-close-menu" aria-expanded="false" data-menu-button>
+          <svg width="40"
+               height="40"
+               aria-label="mobile menu switch">
+            <use class="icon-menu-close js-close-menu" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
         <ul class="mobile-list list">
           <li class="mobile-list__item">
             <a href="./index.html" class="mobile-list__link link">
@@ -775,7 +779,6 @@
              </li>
         </ul>
       </div>
-    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
