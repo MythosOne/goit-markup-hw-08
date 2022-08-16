@@ -92,16 +92,27 @@
     }
   }
   
+.contact__item {
+
+  @media screen and (max-width: 768px) {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+    }
+}
+}
+
   .contact-link {
 
     @media screen and (max-width: 768px) {
       display: flex;
       align-items: left;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
+      // &:last-child {
+      //   margin-bottom: 0;
+      // }
       
       color: var(--prymary-text-color);
     
