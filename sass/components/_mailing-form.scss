@@ -19,7 +19,7 @@
 }
   
   .mailing-form__field--decor {
-    width: 450px;
+    max-width: 450px;
     padding: 15px 16px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -33,7 +33,12 @@
   
     color: rgba(255, 255, 255, 0.6);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px)
+                  and (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
       width: 358px;
     }
 
