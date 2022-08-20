@@ -1289,6 +1289,11 @@ h3 {
   position: relative;
   background-color: var(--secondary-text-color);
 }
+@media screen and (min-width: 320px) and (max-width: 440px) {
+  .modal {
+    padding: 30px 10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1431,6 +1436,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1850,6 +1857,11 @@ h3 {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
 }
+@media screen and (min-width: 320px) and (max-width: 440px) {
+  .mobile-contact__link--color {
+    font-size: 26px;
+  }
+}
 .mobile-contact__link {
   font-weight: 500;
   font-size: 24px;
@@ -1882,6 +1894,11 @@ h3 {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
 }
+@media screen and (min-width: 320px) and (max-width: 440px) {
+  .mobile-social__link {
+    font-size: 10px;
+  }
+}
 
 .menu-btn-close {
   position: absolute;
@@ -1906,4 +1923,8 @@ h3 {
 
 .icon-menu-close:hover {
   fill: var(--accent-bt-color);
+}
+
+.mobile-list__link--current {
+  color: var(--accent-bt-color);
 }/*# sourceMappingURL=main.css.map */

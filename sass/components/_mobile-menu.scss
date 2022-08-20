@@ -68,6 +68,11 @@
         letter-spacing: 0.02em;
 
         color: var(--accent-text-color);
+
+        @media screen and (min-width: 320px)
+                      and (max-width: 440px) {
+        font-size: 26px;        
+    }
     }
 
     &__link {
@@ -93,6 +98,8 @@
         border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
 
+    
+
     &__link {
         font-weight: 500;
         font-size: 18px;
@@ -100,6 +107,11 @@
         letter-spacing: 0.02em;
 
         color: var(--accent-text-color);
+
+        @media screen and (min-width: 320px)
+                      and (max-width: 440px) {
+        font-size: 10px;        
+    }
     }
 }
 
@@ -124,3 +136,7 @@
 .icon-menu-close:hover {
     fill: var(--accent-bt-color)
   }
+
+.mobile-list__link--current {
+    color: var(--accent-bt-color);
+}
